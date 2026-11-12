@@ -1,6 +1,7 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
   const currentUser = getCurrentUser();
   if (!currentUser || currentUser.role !== "cliente") {
+    sessionStorage.setItem("avisoLogin", "Debes iniciar sesión primero para acceder al carrito.");
     window.location.href = "iniciarsession.html";
     return;
   }
@@ -368,5 +369,9 @@
     });
   }
 
-  renderServices();
+  if (window.location.hash === "#carrito") {
+    renderCart();
+  } else {
+    renderServices();
+  }
 });

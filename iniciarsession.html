@@ -24,6 +24,7 @@
                 </p>
               </div>
               <form id="loginForm">
+                <div id="loginAviso" class="alert alert-warning d-none"></div>
                 <div class="form-group mb-3">
                   <label for="loginEmail" class="form-label"><i class="bi bi-envelope me-1"></i>Email</label>
                   <input type="email" class="form-control" id="loginEmail" placeholder="correo@ejemplo.com" required>
@@ -45,5 +46,14 @@
   </section>
   <script src="js/storage.js"></script>
   <script src="js/iniciarsession.js"></script>
+  <script>
+  const aviso = sessionStorage.getItem("avisoLogin");
+  if (aviso) {
+    const box = document.getElementById("loginAviso");
+    box.textContent = aviso;
+    box.classList.remove("d-none");
+    sessionStorage.removeItem("avisoLogin");
+  }
+</script>
 </body>
 </html>

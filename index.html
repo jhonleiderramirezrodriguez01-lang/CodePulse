@@ -39,8 +39,9 @@
       </div>
 
       <!-- Cart mobile -->
+      <!-- Cart mobile -->
       <div class="d-lg-none my-2">
-        <a href="#" class="btn btn-outline-brand w-100 position-relative">
+        <a href="#" class="btn btn-outline-brand w-100 position-relative js-cart-link">
           <i class="bi bi-cart3"></i> Carrito
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
         </a>
@@ -53,15 +54,14 @@
     </div>
 
     <!-- Cart desktop -->
-    <a href="#" class="text-white ms-3 d-none d-lg-block position-relative">
+    <a href="#" class="text-white ms-3 d-none d-lg-block position-relative js-cart-link">
       <i class="bi bi-cart3 cart-icon-lg"></i>
       <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger badge-small-text">0</span>
     </a>
   </div>
 </nav>
 
-
-<!-- ══════════ HERO ══════════ --> #321
+<!-- ══════════ HERO ══════════ --> 
 <section class="hero-section" id="inicio">
       <div class="container position-relative z-index-1">
     <div class="row align-items-center">
@@ -455,8 +455,31 @@
 </footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-  crossorigin="anonymous"></script>
+<div class="modal fade" id="loginRequiredModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="loginRequiredModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-lock me-2"></i>Inicia sesión</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        Debes iniciar sesión primero para acceder al carrito.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <a href="iniciarsession.html" class="btn btn-brand">Iniciar sesión</a>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ...></script>
+  <script src="js/storage.js"></script>
+  <script src="js/authguard.js"></script>
+</body>
+
 </body>
 </html>
